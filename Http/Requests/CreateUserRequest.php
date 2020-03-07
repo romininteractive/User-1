@@ -13,6 +13,8 @@ class CreateUserRequest extends FormRequest
             'last_name' => 'required',
             'email' => 'required|unique:users|email',
             'password' => 'required|min:3|confirmed',
+            'mobile_no' => 'numeric|digits:10',
+            'username' => 'required|unique:users,username',
         ];
     }
 

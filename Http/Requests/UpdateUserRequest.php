@@ -15,6 +15,8 @@ class UpdateUserRequest extends FormRequest
             'first_name' => 'required',
             'last_name' => 'required',
             'password' => 'confirmed',
+            'mobile_no' => 'numeric|digits:10',
+            'username' => "required|unique:users,username,{$user->id}",
         ];
     }
 

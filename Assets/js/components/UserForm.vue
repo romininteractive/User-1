@@ -44,10 +44,19 @@
                                         <el-input v-model="user.last_name"></el-input>
                                         <div v-if="form.errors.has('last_name')" class="el-form-item__error" v-text="form.errors.first('last_name')"></div>
                                     </el-form-item>
+                                    <el-form-item :label="trans('users.form.username')" :class="{'el-form-item is-error': form.errors.has('username') }">
+                                        <el-input v-model="user.username"></el-input>
+                                        <div v-if="form.errors.has('username')" class="el-form-item__error" v-text="form.errors.first('username')"></div>
+                                    </el-form-item>
                                     <el-form-item :label="trans('users.form.email')" :class="{'el-form-item is-error': form.errors.has('email') }">
                                         <el-input v-model="user.email"></el-input>
                                         <div v-if="form.errors.has('email')" class="el-form-item__error" v-text="form.errors.first('email')"></div>
                                     </el-form-item>
+                                    <el-form-item :label="trans('users.form.mobile_no')" :class="{'el-form-item is-error': form.errors.has('mobile_no') }">
+                                        <el-input v-model="user.mobile_no"></el-input>
+                                        <div v-if="form.errors.has('mobile_no')" class="el-form-item__error" v-text="form.errors.first('mobile_no')"></div>
+                                    </el-form-item>
+
                                     <el-form-item :label="trans('users.form.is activated')" :class="{'el-form-item is-error': form.errors.has('activated') }">
                                         <el-checkbox v-model="user.is_activated">Activated</el-checkbox>
                                         <div v-if="form.errors.has('activated')" class="el-form-item__error" v-text="form.errors.first('activated')"></div>

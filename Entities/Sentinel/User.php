@@ -21,12 +21,14 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
         'permissions',
         'first_name',
         'last_name',
+        'mobile_no',
+        'username',
     ];
 
     /**
      * {@inheritDoc}
      */
-    protected $loginNames = ['email'];
+    protected $loginNames = ['email', 'username'];
 
     protected $presenter = UserPresenter::class;
 

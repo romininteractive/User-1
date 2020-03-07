@@ -28,7 +28,7 @@ return [
     | Define which column(s) you'd like to use to login with, currently
     | only supported by the Sentinel user driver
     */
-    'login-columns' => ['email'],
+    'login-columns' => ['email', 'username'],
     /*
     |--------------------------------------------------------------------------
     | Define a class that will handle User presentation
@@ -61,6 +61,8 @@ return [
         'permissions',
         'first_name',
         'last_name',
+        'mobile_no',
+        'username',
     ],
     /*
     |--------------------------------------------------------------------------
