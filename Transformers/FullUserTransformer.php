@@ -22,6 +22,8 @@ class FullUserTransformer extends Resource
             'created_at' => $this->resource->created_at,
             'permissions' => $permissions,
             'roles' => $this->resource->roles->pluck('id'),
+            'username' => $this->resource->username,
+            'mobile_no' => $this->resource->mobile_no,
             'urls' => [],
         ];
         if ($this->resource->id) {

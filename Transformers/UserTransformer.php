@@ -15,6 +15,8 @@ class UserTransformer extends Resource
             'fullname' => $this->resource->present()->fullname,
             'email' => $this->resource->email,
             'created_at' => $this->resource->created_at,
+            'mobile_no' => $this->resource->mobile_no,
+            'username' => $this->resource->username,
             'urls' => [
                 'delete_url' => route('api.user.user.destroy', $this->resource->id),
             ],
